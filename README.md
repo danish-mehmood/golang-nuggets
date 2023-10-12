@@ -16,4 +16,5 @@
 - this will only work for `==` operator when this type of variables are compared , a compile time error will be thrown
 - it was declared as a zero size array so that no memory footprint is added on 
 - [real world use ](https://github.com/golang/go/blob/master/src/net/http/http.go#L22)
+- [more info](https://stackoverflow.com/questions/71031243/how-does-type-donotcompare-0func-prevent-comparability-in-golang)
 
