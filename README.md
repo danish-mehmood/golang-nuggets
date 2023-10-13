@@ -24,3 +24,21 @@
 - and ***n >> 1*** would yield n divided by 2 (8 >> 1 = 4)
 - if we extrapolate , ***n << m*** would yield n multiplied by  2 m times (8 << 2 = 32)
 - and ***n >> m*** would yield n divided by 2 m times (8 >> 2 = 2)
+
+##### 3 - Field alignments for better memory usage 
+```golang
+   type dummy1 struct {
+	float1 float64 //8 bytes
+	float2 float64 //8 bytes
+	bool1  bool    //1 byte
+	bool2  bool    //1 byte
+}
+
+   type dummy2 struct {
+	float1 float64 //8 bytes
+	bool1  bool    //1 byte
+	float2 float64 //8 bytes
+	bool2  bool    //1 byte
+}
+```
+- ***dummy1*** will use less memory then ***dummy2***
