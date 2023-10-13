@@ -8,7 +8,7 @@
 
 
 
-
+***
 #### 1 - Make an incomparable type yourself :
 ```golang
    type incomparable [0]func()
@@ -18,6 +18,9 @@
 - [real world use ](https://github.com/golang/go/blob/master/src/net/http/http.go#L22)
 - [more info](https://stackoverflow.com/questions/71031243/how-does-type-donotcompare-0func-prevent-comparability-in-golang)
 
+
+
+***
 #### 2 - How to think about golang `<<` and `>>` shift operators :
 - there is a good mental model to make sense of these operators without doing many calculations in head
 - ***n << 1*** would yield n multiplied by 2 (8 << 1 = 16)
@@ -25,6 +28,8 @@
 - if we extrapolate , ***n << m*** would yield n multiplied by  2 m times (8 << 2 = 32)
 - and ***n >> m*** would yield n divided by 2 m times (8 >> 2 = 2)
 
+
+***
 #### 3 - Field alignments for better memory usage 
 ```golang
    type dummy1 struct {
@@ -43,6 +48,8 @@
 ```
 - ***dummy1*** will use less memory then ***dummy2***
 
+
+***
 #### 4 - new vs make
 
 *new:*
@@ -63,6 +70,9 @@ make([]int, 10, 100)
 ```
 - Allocates an array of 100 ints and then creates a slice structure with length 10 and a capacity of 100 pointing at the first 10 elements of the array
 
+
+
+***
 
 
 
